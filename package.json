@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/RachBLondon/which-kim-will-win/issues"
   },
-  "homepage": "https://github.com/RachBLondon/which-kim-will-win#readme"
+  "homepage": "https://github.com/RachBLondon/which-kim-will-win#readme",
+  "dependencies": {
+    "request": "^2.64.0"
+  }
 }
