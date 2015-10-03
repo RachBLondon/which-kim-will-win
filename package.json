@@ -1,0 +1,24 @@
+{
+  "name": "which-kim-will-win",
+  "version": "1.0.0",
+  "description": "A simple one page app using instagram API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachBLondon/which-kim-will-win.git"
+  },
+  "keywords": [
+    "instagramAPI",
+    "KimKardashian",
+    "node"
+  ],
+  "author": "Rachel Black",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachBLondon/which-kim-will-win/issues"
+  },
+  "homepage": "https://github.com/RachBLondon/which-kim-will-win#readme"
+}
