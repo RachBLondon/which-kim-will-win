@@ -6,16 +6,21 @@ var index = fs.readFileSync(__dirname + '/index.html');
 // set the port for the server
 var port = process.env.PORT || 8000;
 
-function handler(request, response) {
-  //display 'HELLO WORLD' when the user is on the home page
-  var url = request.url; //e.g. '/'
-  if (url.length === 1) {
-    response.writeHead(200, {
-      "Content-Type": "text/html"
-    });
-    response.end(index);
-  } 
-}
+ function handler(req, res) {
+    var url = req.url;
+    console.log(url);
+    if (url === '/') {
+      res.writeHead(200, {"Content-Type": "text/html"});
+      res.end(index.toString());
+    } else if (url.indexOf('.') > -1) {
+      var ext = url.split('.')[1];
+      res.writeHead(200, {'Content-Type': 'text/' + ext})
+      res.end(fs.readFileSync(__dirname + url));
+    }
+    // else if (url.length > 1) {
+    //   wordDefintion(req, res);
+    // };
+  };
 
 http.createServer(handler).listen(port);
 
