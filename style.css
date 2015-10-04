@@ -1,3 +1,15 @@
 h1 {
   color: green;
 }
+
+img {
+  width: 400px;
+}
+
+/*
+@media screen and (min-width: 480px) {
+  .halfWidth {
+    width: 50%;
+    height: 500px;
+  }
+}*/
