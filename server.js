@@ -1,6 +1,8 @@
 var http = require('http');
 var fs = require('fs');
+var env = require('env2')('./config.env');
 var index = fs.readFileSync(__dirname + '/index.html');
+var play = fs.readFileSync(__dirname + '/play.html');
 
 
 // set the port for the server
@@ -16,11 +18,16 @@ var port = process.env.PORT || 8000;
       var ext = url.split('.')[1];
       res.writeHead(200, {'Content-Type': 'text/' + ext})
       res.end(fs.readFileSync(__dirname + url));
+    } else if (url.indexOf("play")> -1) {
+      res.writeHead(200, {'Content-Type': 'text/html'})
+      res.end(play.toString());
     }
-    // else if (url.length > 1) {
-    //   wordDefintion(req, res);
-    // };
   };
+
+
+
+
+
 
 http.createServer(handler).listen(port);
 
