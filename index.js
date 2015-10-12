@@ -9,7 +9,7 @@ function showBlocks() {
   var out = new XMLHttpRequest();
   out.onreadystatechange = function() {
     if (out.readyState === 4 && out.status === 200) {
-      console.log(out.responseText);
+    document.getElementById("photoOne").setAttribute('src', out.responseText);
       // document.getElementById('results').innerHTML = out.responseText;
     }
   };
