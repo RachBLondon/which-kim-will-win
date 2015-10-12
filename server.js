@@ -1,6 +1,9 @@
 var http = require('http');
 var fs = require('fs');
+var getKimInsta = require('./backend.js')
+var env = require('env2')('./config.env');
 var index = fs.readFileSync(__dirname + '/index.html');
+var play = fs.readFileSync(__dirname + '/play.html');
 
 
 // set the port for the server
@@ -16,11 +19,18 @@ var port = process.env.PORT || 8000;
       var ext = url.split('.')[1];
       res.writeHead(200, {'Content-Type': 'text/' + ext})
       res.end(fs.readFileSync(__dirname + url));
+    } else if (url.indexOf("/play")> -1) {
+       kimsPhotos(req, res);
     }
-    // else if (url.length > 1) {
-    //   wordDefintion(req, res);
-    // };
   };
+
+function kimsPhotos (req, res){
+  res.writeHead(200, {"Content-Type":"text/html"});
+  getKimInsta(function(photo){
+    res.end(photo);
+  });
+};
+
 
 http.createServer(handler).listen(port);
 
