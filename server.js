@@ -19,7 +19,7 @@ var port = process.env.PORT || 8000;
       var ext = url.split('.')[1];
       res.writeHead(200, {'Content-Type': 'text/' + ext})
       res.end(fs.readFileSync(__dirname + url));
-    } else if (url.indexOf("play")> -1) {
+    } else if (url.indexOf("/play")> -1) {
        kimsPhotos(req, res);
     }
   };

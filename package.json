@@ -19,7 +19,7 @@
     "node"
   ],
   "author": "Rachel Black",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/RachBLondon/which-kim-will-win/issues"
   },
