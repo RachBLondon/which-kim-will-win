@@ -10,8 +10,8 @@ var getKimInsta = function(word, callback) {
           // send an error to front end
       } else if (!error && response.statusCode == 200) {
       var jsonObject = JSON.parse(array);
-      console.log(jsonObject);
-      callback(jsonObject[0].text);
+      console.log(jsonObject.data[0].images.standard_resolution.url);
+      // callback(jsonObject);
     }
   });
 };
