@@ -9,8 +9,15 @@ function showBlocks() {
   var out = new XMLHttpRequest();
   out.onreadystatechange = function() {
     if (out.readyState === 4 && out.status === 200) {
-    document.getElementById("photoOne").setAttribute('src', out.responseText);
+      //  var photoURL = out.responseText
+      //  console.log(photoURL);
+    // document.getElementById("photoOne").setAttribute('src', out.responseText[0]);
+      // console.log(out);
+      var photoArr = out.responseText.split(">");
+      console.log(photoArr);
       // document.getElementById('results').innerHTML = out.responseText;
+      document.getElementById("photoOne").setAttribute('src', photoArr[0]);
+      document.getElementById("photoTwo").setAttribute('src', photoArr[1]);
     }
   };
   out.open('GET', '/play');
@@ -23,7 +30,7 @@ function showBlocks() {
 //   var oldInsta = document.getElementsByClassName("instaphotos");
 //   var arrphotos = [];
 //
-//   for (index = oldInsta.length - 1; index >= 0; index--) {
+//   for (index = oldInsta.length - 1; index >= 0; index--) {de44ff
 //     oldInsta[index].parentNode.removeChild(oldInsta[index]);
 //   }
 //   // for loop is accessing nested photo urls and pushing into array
