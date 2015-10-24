@@ -11,9 +11,13 @@ function showBlocks() {
     if (out.readyState === 4 && out.status === 200) {
       //  var photoURL = out.responseText
       //  console.log(photoURL);
-    document.getElementById("photoOne").setAttribute('src', out.responseText[0]);
+    // document.getElementById("photoOne").setAttribute('src', out.responseText[0]);
       // console.log(out);
-      document.getElementById('results').innerHTML = out.responseText;
+      var photoArr = out.responseText.split(">");
+      console.log(photoArr);
+      // document.getElementById('results').innerHTML = out.responseText;
+      document.getElementById("photoOne").setAttribute('src', photoArr[0]);
+      document.getElementById("photoTwo").setAttribute('src', photoArr[1]);
     }
   };
   out.open('GET', '/play');
