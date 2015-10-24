@@ -4,8 +4,8 @@
   var photoOneArr = [];
   var photoTwoArr = [];
 
-  document.getElementById("startBtn").addEventListener("click", showBlocks);
 
+  document.getElementById("startBtn").addEventListener("click", showBlocks);
 
   function showBlocks() {
     var out = new XMLHttpRequest();
@@ -16,16 +16,36 @@
           photoTwoArr = [];
         }
         var photoArr = out.responseText.split(">");
-        console.log(photoArr);
         photoOneArr.push(photoArr[0],photoArr[1]);
         photoTwoArr.push(photoArr[2],photoArr[3]);
         kimPhotoOne.setAttribute('src', photoOneArr[0]);
-        kimPhotoTwo.setAttribute('src', photoTwoArr[0]);
-        console.log(photoOneArr);
-        console.log(photoTwoArr);
+        kimPhotoTwo.setAttribute('src', photoTwoArr[0]);;
       }
     };
     out.open('GET', '/play');
     out.send();
   };
+  //write game scrip
+  document.getElementById("photoOne").addEventListener("click", compare);
+  document.getElementById("photoTwo").addEventListener("click", compare);
+
+
+  function compare(){
+
+    if (this.src === photoOneArr[0]){
+      if (photoOneArr[1]>photoTwoArr[1]){
+        document.getElementById("result").innerHTML = "Awesome you win!"
+      } else {
+        document.getElementById("result").innerHTML = "LOSER!!"
+      }
+    }
+    else if (this.src === photoTwoArr[0])
+      if (photoOneArr[1]< photoTwoArr[1]){
+        document.getElementById("result").innerHTML = "Awesome you win!"
+      } else {
+        document.getElementById("result").innerHTML = "LOSER!!"
+      }
+  }
+
+
 })();
