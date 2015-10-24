@@ -27,7 +27,6 @@ var port = process.env.PORT || 8000;
 function kimsPhotos (req, res){
   res.writeHead(200, {"Content-Type":"text/html"});
   getKimInsta(function(photo){
-    console.log(photo);
     res.end(photo);
   });
 };
