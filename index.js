@@ -1,9 +1,7 @@
 (function(){
   var kimPhotoOne = document.getElementById("photoOne");
   var kimPhotoTwo = document.getElementById("photoTwo");
-  var photoOneArr = [];
-  var photoTwoArr = [];
-
+  var photoArr;
 
   document.getElementById("startBtn").addEventListener("click", showBlocks);
 
@@ -11,36 +9,36 @@
     var out = new XMLHttpRequest();
     out.onreadystatechange = function() {
       if (out.readyState === 4 && out.status === 200) {
-        if(photoOneArr.length != 0 || photoTwoArr.length !=0){
-          photoOneArr = [];
-          photoTwoArr = [];
-        }
-        var photoArr = out.responseText.split(">");
-        photoOneArr.push(photoArr[0],photoArr[1]);
-        photoTwoArr.push(photoArr[2],photoArr[3]);
-        kimPhotoOne.setAttribute('src', photoOneArr[0]);
-        kimPhotoTwo.setAttribute('src', photoTwoArr[0]);;
+        //clear exisisting photos if they are there
+
+        photoArr = JSON.parse(out.responseText);
+        console.log(photoArr);
+        kimPhotoOne.setAttribute('src', photoArr.image1);
+        kimPhotoTwo.setAttribute('src', photoArr.image2);
       }
+
     };
     out.open('GET', '/play');
     out.send();
+
+
   };
   //write game scrip
-  document.getElementById("photoOne").addEventListener("click", compare);
-  document.getElementById("photoTwo").addEventListener("click", compare);
+  kimPhotoOne.addEventListener("click", compare);
+  kimPhotoTwo.addEventListener("click", compare);
 
 
   function compare(){
 
-    if (this.src === photoOneArr[0]){
-      if (photoOneArr[1]>photoTwoArr[1]){
+    if (this.src === photoArr.image1){
+      if (photoArr.likes1 > photoArr.likes2){
         document.getElementById("result").innerHTML = "Awesome you win!"
       } else {
         document.getElementById("result").innerHTML = "LOSER!!"
       }
     }
-    else if (this.src === photoTwoArr[0])
-      if (photoOneArr[1]< photoTwoArr[1]){
+    else if (this.src === photoArr.image2)
+      if (photoArr.likes2 > photoArr.likes1){
         document.getElementById("result").innerHTML = "Awesome you win!"
       } else {
         document.getElementById("result").innerHTML = "LOSER!!"

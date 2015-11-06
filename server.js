@@ -11,7 +11,6 @@ var port = process.env.PORT || 8000;
 
  function handler(req, res) {
     var url = req.url;
-    console.log(url);
     if (url === '/') {
       res.writeHead(200, {"Content-Type": "text/html"});
       res.end(index.toString());
