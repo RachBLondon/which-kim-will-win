@@ -8,40 +8,28 @@
 body {
 	margin: 0;
 }
-
-h2 {
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-}
-.logo {
-	height: 9em;
-}
-
 img {
-	display: block;
-	margin: auto;
+	margin-left: auto;
+  margin-right: auto;
 }
 
-.kimpics img {
-	height: 20em;
+img:hover {
+	background-image: url("images/logos-blue-dark.png");
 }
 
 button {
-	display: block;
-	margin: auto;
-	background-color: #669999;
-  color: black;
+	background-color: #666699;
 	border-style: none;
-	font-size: 20px;
-	padding: 0.5
+	font-size: 1em;
+	/* padding: 1%; */
+	border-radius: 3px;
+	height: 2em;
+	display: inline;;
 }
 
-button:hover {
-	background-color: #996666;
-	color: white;
+content img {
+	height: 300px;
 }
-
-
 
 [class*='col-'] {
 	float: left;
