@@ -3,7 +3,7 @@ var fs = require('fs');
 var getKimInsta = require('./backend.js')
 var env = require('env2')('./config.env');
 var index = fs.readFileSync(__dirname + '/index.html');
-var play = fs.readFileSync(__dirname + '/play.html');
+
 
 
 // set the port for the server

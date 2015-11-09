@@ -9,6 +9,60 @@ body {
 	margin: 0;
 }
 
+.logo {
+	height: 9em;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+
+.kimpics {
+	background-color: black;
+}
+
+.kimpics img {
+	/*height: 20em;*/
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+
+}
+
+.content {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 70%;
+}
+
+
+button {
+	display: block;
+	margin: auto;
+	background-color: #669999;
+  color: black;
+	border-style: none;
+	font-size: 20px;
+	padding: 0.5
+}
+
+button:hover {
+	background-color: #996666;
+	color: white;
+}
+
+
+
 [class*='col-'] {
 	float: left;
   min-height: 1px;
