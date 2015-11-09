@@ -9,10 +9,6 @@ body {
 	margin: 0;
 }
 
-h2 {
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-}
 .logo {
 	height: 9em;
 }
@@ -20,6 +16,16 @@ h2 {
 img {
 	display: block;
 	margin: auto;
+}
+
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+
+.kimpics {
+	background-color: black;
 }
 
 .kimpics img {
@@ -36,7 +42,7 @@ img {
     height: 300px;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 70%;
 }
 
 
