@@ -1,12 +1,18 @@
 [![Code Climate](https://codeclimate.com/github/RachBLondon/which-kim-will-win/badges/gpa.svg)](https://codeclimate.com/github/RachBLondon/which-kim-will-win)
 
-https://sleepy-retreat-6347.herokuapp.com/
+http://which-kim-wins.herokuapp.com/
 #Which Kim will win?
+A simple one page app built using the the instagram API. App requests two Kim Kardashian images from the instagram API, users can then play a game where the click the image which they thing has the most likes. If they are correct they get a point.
 
-A simple one page app built using the the instagram API
+Built using node.
 
-
+![wireframes](https://files.gitter.im/RachBLondon/em4x/balsamic-mockup.png)
 ##Dependencies
 node request module
 
-##Dev Dependencies
+TODO
+- switch to Hapi Framework
+- switch to bootstrap
+- add redis database
+- add login feature
+- add score
