@@ -7,6 +7,7 @@ A simple one page app built using the the instagram API. App requests two Kim Ka
 Built using node.
 
 ![wireframes](https://files.gitter.im/RachBLondon/em4x/balsamic-mockup.png)
+![high-res wireframes] (https://files.gitter.im/RachBLondon/KLiJ/highres-wf-05.png)
 ##Dependencies
 node request module
 
