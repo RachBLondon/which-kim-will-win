@@ -87,6 +87,13 @@ button:hover {
 	margin: 0.1em;
 }
 
+.winner {
+	color: #669999;
+}
+
+.loser {
+	color: #996666;;
+}
 
 [class*='col-'] {
 	float: left;

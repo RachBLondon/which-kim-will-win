@@ -29,7 +29,7 @@
         kimPhotoTwo.setAttribute('src', photoArr.image2);
         document.getElementById("score").innerHTML = "Score  :  ";
         document.getElementById("scoreValue").innerHTML = scoreResult.toString();
-          $(".kimpics").fadeIn("slow");
+          $(".kimpics").fadeIn();
       }
 
     };
@@ -41,21 +41,21 @@
 
 
   function compare(){
-    $(".kimpics").hide("fast");
+    $(".kimpics").fadeOut( "slow" );
     if (this.src === photoArr.image1){
       if (photoArr.likes1 > photoArr.likes2){
           scoreResult += 1;
-          $(".winner").show("slow");
+          $(".winner").fadeIn();
       } else {
-        $(".loser").show("slow");
+        $(".loser").fadeIn();
       }
     }
     else if (this.src === photoArr.image2)
       if (photoArr.likes2 > photoArr.likes1){
         scoreResult += 1;
-        $(".winner").show("slow");
+        $(".winner").fadeIn();
       } else {
-        $(".loser").show("slow");
+        $(".loser").fadeIn();
       }
       setTimeout(function(){ showBlocks() }, 1000);
   }
