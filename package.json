@@ -4,7 +4,7 @@
   "description": "A simple one page app using instagram API",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "./node_modules/.bin/tape ./test/*",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=81da22ff5c77e2c4ff2a6cb52fa253fd007a249fdbd2b5a0fbe7f79a3ed569aa codeclimate-test-reporter < lcov.info",
     "coverage": "istanbul cover ./node_modules/.bin/tape ./test/*"

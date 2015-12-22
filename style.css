@@ -3,6 +3,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -19,7 +20,7 @@ img {
 }
 
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
 	text-align: center;
 }
 
@@ -28,11 +29,9 @@ h2 {
 }
 
 .scoreStyle h2 {
-	display: inline-block;
+	display: inline;
 }
-/*#score {
-	display: none;
-}*/
+
 .kimpics {
 	background-color: black;
 }
@@ -51,8 +50,6 @@ h2 {
 .content {
     width: 300px;
     height: 300px;
-    /*position: relative;*/
-    /*overflow: hidden;*/
 		margin: auto;
 }
 
@@ -62,14 +59,12 @@ h2 {
 
 .results{
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
 }
 
 .buttonArea {
-	/*display: inline-block;*/
 	text-align: center;
-
 }
+
 #nextBtn {
 	margin-left: 1.5em;
 }
@@ -86,6 +81,11 @@ button:hover {
 	color: white;
 }
 
+.results h1 {
+	text-align: center;
+	font-size: 10em;
+	margin: 0.1em;
+}
 
 
 [class*='col-'] {

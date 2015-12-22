@@ -4,14 +4,19 @@
   var photoArr;
   var scoreResult = 0;
 
-  $("#nextBtn").hide();
+  // $("#nextBtn").hide();
   $(".kimpics").hide();
+  $(".winner").hide();
+  $(".loser").hide();
 
 
   document.getElementById("startBtn").addEventListener("click", showBlocks);
 
   function showBlocks() {
-    $("#nextBtn").show("slow")
+    $("#startBtn").hide();
+    $(".winner").hide();
+    $(".loser").hide();
+    // $("#nextBtn").show("slow");
     // document.getElementById("score").style.display = 'inline';
     var out = new XMLHttpRequest();
     out.onreadystatechange = function() {
@@ -31,30 +36,28 @@
     out.open('GET', '/play');
     out.send();
   };
-  //write game scrip
   kimPhotoOne.addEventListener("click", compare);
   kimPhotoTwo.addEventListener("click", compare);
 
 
   function compare(){
-
+    $(".kimpics").hide("fast");
     if (this.src === photoArr.image1){
       if (photoArr.likes1 > photoArr.likes2){
-        document.getElementById("result").innerHTML = "Awesome you win!"
+          scoreResult += 1;
+          $(".winner").show("slow");
       } else {
-        document.getElementById("result").innerHTML = "LOSER!!"
+        $(".loser").show("slow");
       }
     }
     else if (this.src === photoArr.image2)
       if (photoArr.likes2 > photoArr.likes1){
-        document.getElementById("result").innerHTML = "Awesome you win!"
         scoreResult += 1;
-        document.getElementById("scoreValue").innerHTML = scoreResult.toString();
+        $(".winner").show("slow");
       } else {
-        document.getElementById("result").innerHTML = "LOSER!!"
+        $(".loser").show("slow");
       }
-       $( "#result" ).fadeOut( "slow" );
-
+      setTimeout(function(){ showBlocks() }, 1000);
   }
 
 
