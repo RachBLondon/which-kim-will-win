@@ -37,7 +37,6 @@ h2 {
 }
 
 .kimpics img {
-	/*height: 20em;*/
     display: inline;
     margin: 0 auto;
     height: 100%;
@@ -95,6 +94,22 @@ button:hover {
 	color: #996666;;
 }
 
+.contact {
+	text-align: center;
+	font-size: 1em;
+	margin: 0;
+	position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	padding: 0.3rem;
+	background-color: #669999;
+
+}
+.contact a {
+		text-decoration: none;
+		color: white;
+}
 [class*='col-'] {
 	float: left;
   min-height: 1px;
