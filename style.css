@@ -23,7 +23,16 @@ h2 {
 	text-align: center;
 }
 
+.scoreStyle {
+	text-align: center;
+}
 
+.scoreStyle h2 {
+	display: inline-block;
+}
+/*#score {
+	display: none;
+}*/
 .kimpics {
 	background-color: black;
 }
