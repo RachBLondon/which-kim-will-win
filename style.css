@@ -44,15 +44,20 @@ h2 {
     height: 100%;
     width: auto;
 		border: none;
+		-webkit-filter: grayscale(100%)
 
 }
 
 .content {
     width: 300px;
     height: 300px;
-    position: relative;
-    overflow: hidden;
+    /*position: relative;*/
+    /*overflow: hidden;*/
 		margin: auto;
+}
+
+.kimpics img:hover {
+	-webkit-filter: grayscale(0%)
 }
 
 .results{
