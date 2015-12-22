@@ -4,9 +4,14 @@
   var photoArr;
   var scoreResult = 0;
 
+  $("#nextBtn").hide();
+  $(".kimpics").hide();
+
+
   document.getElementById("startBtn").addEventListener("click", showBlocks);
 
   function showBlocks() {
+    $("#nextBtn").show("slow")
     // document.getElementById("score").style.display = 'inline';
     var out = new XMLHttpRequest();
     out.onreadystatechange = function() {
@@ -19,13 +24,12 @@
         kimPhotoTwo.setAttribute('src', photoArr.image2);
         document.getElementById("score").innerHTML = "Score  :  ";
         document.getElementById("scoreValue").innerHTML = scoreResult.toString();
+          $(".kimpics").fadeIn("slow");
       }
 
     };
     out.open('GET', '/play');
     out.send();
-
-
   };
   //write game scrip
   kimPhotoOne.addEventListener("click", compare);
@@ -49,6 +53,8 @@
       } else {
         document.getElementById("result").innerHTML = "LOSER!!"
       }
+       $( "#result" ).fadeOut( "slow" );
+
   }
 
 

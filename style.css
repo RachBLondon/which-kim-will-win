@@ -43,6 +43,7 @@ h2 {
     margin: 0 auto;
     height: 100%;
     width: auto;
+		border: none;
 
 }
 
@@ -51,13 +52,23 @@ h2 {
     height: 300px;
     position: relative;
     overflow: hidden;
-    border-radius: 70%;
+		margin: auto;
 }
 
+.results{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
 
+.buttonArea {
+	/*display: inline-block;*/
+	text-align: center;
+
+}
+#nextBtn {
+	margin-left: 1.5em;
+}
 button {
-	display: block;
-	margin: auto;
 	background-color: #669999;
   color: black;
 	border-style: none;
