@@ -3,6 +3,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -19,7 +20,7 @@ img {
 }
 
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
 	text-align: center;
 }
 
@@ -28,11 +29,9 @@ h2 {
 }
 
 .scoreStyle h2 {
-	display: inline-block;
+	display: inline;
 }
-/*#score {
-	display: none;
-}*/
+
 .kimpics {
 	background-color: black;
 }
@@ -43,21 +42,33 @@ h2 {
     margin: 0 auto;
     height: 100%;
     width: auto;
+		border: none;
+		-webkit-filter: grayscale(100%)
 
 }
 
 .content {
     width: 300px;
     height: 300px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 70%;
+		margin: auto;
 }
 
+.kimpics img:hover {
+	-webkit-filter: grayscale(0%)
+}
 
+.results{
+	text-align: center;
+}
+
+.buttonArea {
+	text-align: center;
+}
+
+#nextBtn {
+	margin-left: 1.5em;
+}
 button {
-	display: block;
-	margin: auto;
 	background-color: #669999;
   color: black;
 	border-style: none;
@@ -70,7 +81,19 @@ button:hover {
 	color: white;
 }
 
+.results h1 {
+	text-align: center;
+	font-size: 10em;
+	margin: 0.1em;
+}
 
+.winner {
+	color: #669999;
+}
+
+.loser {
+	color: #996666;;
+}
 
 [class*='col-'] {
 	float: left;
